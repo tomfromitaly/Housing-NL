@@ -14,7 +14,7 @@ from selenium.webdriver.common.by import By
 import requests
 import time
 
-IFTTT_WEBHOOKS_KEY = "b8w6x6MOvszzdQi9XWWuHH"
+IFTTT_WEBHOOKS_KEY = ""
 
 def send_ifttt_notification():
     report = {}
