@@ -5,15 +5,8 @@ Created on Mon May  8 18:07:49 2023
 @author: tbata
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May  8 17:53:01 2023
-
-@author: tbata
-"""
-
 def simulate_human_delay():
-    time.sleep(random.uniform(1.0, 2.0))  # Random sleep between 1 and 2 seconds
+    time.sleep(random.uniform(1.0, 3.0))  # Random sleep between 1 and 3 seconds
 
 
 import time
@@ -29,7 +22,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-IFTTT_WEBHOOKS_KEY = "b8w6x6MOvszzdQi9XWWuHH"
+IFTTT_WEBHOOKS_KEY = "" #insert key from IFTTT app
 
 def send_ifttt_notification(event, value1=None, value2=None, value3=None):
     url = f"https://maker.ifttt.com/trigger/{event}/with/key/{IFTTT_WEBHOOKS_KEY}"
@@ -77,7 +70,7 @@ while True:
     # location_dropdown = wait.until(EC.element_to_be_clickable((By.ID, "location")))
     # location_dropdown.click()
 
-    # # Select the 'Lutherse Burgwal' option
+    # # Select the 'Lutherse Burgwal' option - this is for the exact location
     # location_option = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='location']/option[5]")))
     # location_option.click()
     # time.sleep(2)  # Allow the page to load
